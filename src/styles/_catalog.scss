@@ -2,7 +2,7 @@
   display: grid;
   gap: 48px;
   justify-content: center;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(1, 200px);
 
   &__card {
     display: grid;
@@ -15,20 +15,20 @@
   }
 }
 
-@media (max-width: 1023px) {
-  .catalog {
-    grid-template-columns: repeat(3,200px);
-  }
-}
-
-@media (max-width: 767px) {
+@include onTablet {
   .catalog {
     grid-template-columns: repeat(2,200px);
   }
 }
 
-@media  (max-width: 487px) {
+@include onSmallDesktop {
   .catalog {
-    grid-template-columns: repeat(1,200px);
+    grid-template-columns: repeat(3,200px);
+  }
+}
+
+@include onBigDesktop {
+  .catalog {
+    grid-template-columns: repeat(4,200px);
   }
 }
